@@ -1,14 +1,17 @@
 crop,pest,active_ingredient,dose,unit,pre_harvest_interval_days,label_ref
-Paddy,Stem borer,Chlorantraniliprole 18.5% SC,0.150,L/ha,21,LBL-PD-001
-Paddy,Leaf folder,Cartap hydrochloride 50% SP,1.000,kg/ha,21,LBL-PD-002
-Paddy,Brown plant hopper,Pymetrozine 50% WG,0.300,kg/ha,24,LBL-PD-003
-Paddy,Gall midge,Fipronil 5% SC,0.400,L/acre,30,LBL-PD-004
-Cotton,Pink bollworm,Thiodicarb 75% WP,0.625,kg/ha,21,LBL-CT-001
-Cotton,Whitefly,Diafenthiuron 50% WP,0.240,kg/acre,28,LBL-CT-002
-Cotton,Jassid,Flonicamid 50% WG,0.150,kg/ha,25,LBL-CT-003
-Cotton,Aphid,Acetamiprid 20% SP,0.100,kg/ha,20,LBL-CT-004
-Soybean,Girdle beetle,Thiacloprid 21.7% SC,0.750,L/ha,20,LBL-SB-001
-Soybean,Semilooper,Indoxacarb 15.8% EC,0.333,L/ha,15,LBL-SB-002
-Soybean,Stem fly,Quinalphos 25% EC,0.600,L/acre,25,LBL-SB-003
-Maize,Fall armyworm,Emamectin benzoate 5% SG,0.080,kg/ha,14,LBL-MZ-001
-Maize,Shoot fly,Thiamethoxam 25% WG,0.100,kg/ha,21,LBL-MZ-002
+Cotton,Jassids,Acephate 75 % SP,390,g/ha,15,CIBRC-2023 p2
+Cotton,Jassids,Acephate 95 % SG,790,g/ha,18,CIBRC-2023 p2
+Cotton,"Aphids, Jassids",Acetamiprid 20 % SP,50,g/ha,15,CIBRC-2023 p3
+Cotton,"Bollworms, Whitefly",Bifenthrin 10 % EC,323.74,ml/acre,15,CIBRC-2023 p7
+Cotton,"American bollworm, Spotted bollworm, Tobacco caterpillar",Chlorantraniliprole 18.50 % SC,150,ml/ha,9,CIBRC-2023 p12
+Maize,"Fall Armyworm, Stem Borer",Isocycloseram 18.1% W/W SC (20 % W/V Sc),300,ml/ha,48,CIBRC-2023 p36
+Paddy,"Stem borer, Leaf folder, Brown plant hopper",Acephate 95 % SG,592,g/ha,30,CIBRC-2023 p2
+Paddy,"Yellow stem borer, Leaf folder, Plant hoppers, Green leaf hopper",Acephate 97 % DF,750,g/ha,21,CIBRC-2023 p2
+Paddy,"Stem borer, Leaf folder, Brown plant hopper",Benfuracarb 03 % GR,33000,g/ha,20,CIBRC-2023 p6
+Paddy,"Stem borer, Leaf folder",Bifenthrin 08.80 % CS,500,ml/ha,21,CIBRC-2023 p7
+Paddy,"Stem borer, Leaf folder, Green leaf hopper",Bifenthrin 10 % EC,500,ml/ha,21,CIBRC-2023 p7
+Soybean,"Green Semi looper, Stem fly, Girdle beetle",Chlorantraniliprole 18.50 % SC,60.7,ml/acre,22,CIBRC-2023 p13
+Soybean,"Green semi looper, pod borer, Girdle beetle & Tobacco caterpillar",Emamectin benzoate 01.90 % EC,425,ml/ha,20,CIBRC-2023 p24
+Soybean,Girdle beetle & stem fly,Ethion 50 % EC,1500,ml/ha,30,CIBRC-2023 p24
+Soybean,"Defoliators (Helicoverpa armigera, Spodoptera litura and Semilooper)",Flubendiamide 39.35 % w/w SC,150,ml/ha,17,CIBRC-2023 p31
+Soybean,"Leaf worm, semi-looper, Gridle Beetle, Stem fly",Isocycloseram 9.2% W/W Dc (10% W/V) DC,600,ml/ha,35,CIBRC-2023 p36

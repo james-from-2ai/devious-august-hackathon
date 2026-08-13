@@ -1,0 +1,15 @@
+district,crop,season,sowing_window_start,sowing_window_end,notes
+Kamareddy,Cotton,Kharif,01/06/2025,15-07-2025,
+Kamareddy,Soybean,Kharif,10/06/2025,05-07-2025,
+Kamareddy,Paddy,Kharif,15 June 2025,31 July 2025,transplanting
+Warangal (Urban),Cotton,Kharif,25/05/2025,10-07-2025,
+Warangal (Urban),Paddy,Kharif,20 June 2025,05 August 2025,
+Warangal (Urban),Maize,Kharif,05/06/2025,30-06-2025,
+Nirmal,Soybean,Kharif,12/06/2025,08-07-2025,
+Nirmal,Cotton,Kharif,28/05/2025,12-07-2025,
+Nirmal,Paddy,Rabi,15 November 2025,20 December 2025,
+Jagtial,Cotton,Kharif,01/06/2025,10-07-2025,
+Jagtial,Maize,Kharif,05 June 2025,28 June 2025,
+Jagtial,Paddy,Kharif,18/06/2025,02-08-2025,
+Peddapalli,Paddy,Kharif,20/06/2025,05-08-2025,
+Peddapalli,Cotton,Kharif,30 May 2025,08 July 2025,

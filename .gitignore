@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.parquet
+.pytest_cache/
+.ruff_cache/
+uv.lock
+
+# Belt and braces. The pre-commit hook is the real guard, but if anyone
+# ever drops an answer key in here by hand, git should not pick it up.
+gold*
+answers*
+*answer_key*

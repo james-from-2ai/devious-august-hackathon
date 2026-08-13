@@ -1,0 +1,14 @@
+crop,pest,active_ingredient,dose,unit,pre_harvest_interval_days,label_ref
+Paddy,Stem borer,Chlorantraniliprole 18.5% SC,0.150,L/ha,21,LBL-PD-001
+Paddy,Leaf folder,Cartap hydrochloride 50% SP,1.000,kg/ha,21,LBL-PD-002
+Paddy,Brown plant hopper,Pymetrozine 50% WG,0.300,kg/ha,24,LBL-PD-003
+Paddy,Gall midge,Fipronil 5% SC,0.400,L/acre,30,LBL-PD-004
+Cotton,Pink bollworm,Thiodicarb 75% WP,0.625,kg/ha,21,LBL-CT-001
+Cotton,Whitefly,Diafenthiuron 50% WP,0.240,kg/acre,28,LBL-CT-002
+Cotton,Jassid,Flonicamid 50% WG,0.150,kg/ha,25,LBL-CT-003
+Cotton,Aphid,Acetamiprid 20% SP,0.100,kg/ha,20,LBL-CT-004
+Soybean,Girdle beetle,Thiacloprid 21.7% SC,0.750,L/ha,20,LBL-SB-001
+Soybean,Semilooper,Indoxacarb 15.8% EC,0.333,L/ha,15,LBL-SB-002
+Soybean,Stem fly,Quinalphos 25% EC,0.600,L/acre,25,LBL-SB-003
+Maize,Fall armyworm,Emamectin benzoate 5% SG,0.080,kg/ha,14,LBL-MZ-001
+Maize,Shoot fly,Thiamethoxam 25% WG,0.100,kg/ha,21,LBL-MZ-002

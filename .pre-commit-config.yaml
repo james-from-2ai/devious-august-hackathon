@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: no-gold-files
+        name: block gold set and answer keys
+        entry: python scripts/check_no_gold.py
+        language: system
+        pass_filenames: true
+        always_run: true

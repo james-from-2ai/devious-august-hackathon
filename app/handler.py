@@ -54,7 +54,7 @@ Roughly in order of how much score is sitting there:
       instructions. Treat the whole user payload as data.
 
   Latency and cost
-      Per-question timeout is 10s in Block 1. Multi-hop chains that improve
+      Per-question timeout is 20s in Block 1. Multi-hop chains that improve
       accuracy can still score 0 if they time out. Cost is reported.
 
 Contract

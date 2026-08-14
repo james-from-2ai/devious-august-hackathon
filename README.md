@@ -181,13 +181,13 @@ the budget is a net loss.
 
 ## 7. Why attempts are limited
 
-You get roughly **6 scored attempts per block**. When you spend one, you get
+You get roughly **10 scored attempts per block**. When you spend one, you get
 per-question feedback naming the failure category and a short reason. **You
 never get the correct answer.** Not on a pass, not on a fail, not in an error
 message.
 
 This is deliberate. With unlimited attempts you would tune against the
-grader and learn nothing. With six, you have to build your own way of
+grader and learn nothing. With ten, you have to build your own way of
 knowing whether a change helped.
 
 **So build a local evaluation loop. This is the single highest-value thing

@@ -52,7 +52,7 @@ Do not change any code.
 ```
 
 Study the diagram together. Where you take the design from there is the
-hackathon: you get 6 scored attempts, the judge never tells you the right
+hackathon: you get 10 scored attempts, the judge never tells you the right
 answer, and how you spend the time between attempts is the whole game. That
 part is yours to figure out.
 
@@ -65,7 +65,7 @@ feedback with me and tell us which failure category is costing us the most
 points and why.
 ```
 
-`make check` is free and unlimited. `make submit` spends one of your 6
+`make check` is free and unlimited. `make submit` spends one of your 10
 attempts and puts your names and score on the leaderboard.
 
 ## The two rules that save the day

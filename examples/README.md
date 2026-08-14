@@ -29,7 +29,7 @@ Format:
 
 ## How to use this
 
-The grader gives you roughly six scored attempts per block and never tells
+The grader gives you roughly ten scored attempts per block and never tells
 you the correct answer. That is not an obstacle to work around; it is the
 constraint the exercise is built on. The way through it is to build your own
 scorer.

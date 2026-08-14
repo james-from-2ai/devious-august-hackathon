@@ -39,20 +39,18 @@ The tunnel gives your machine a public address (that address is your
 **endpoint**, the door the judge knocks on) and registers it for you
 automatically.
 
-## 3. The middle of the day: the improvement loop
+## 3. The middle of the day: get your bearings
 
 ```
 Read data/SOURCE.md, examples/calibration.jsonl, and app/handler.py.
-Explain in plain words where our machine is weak. Then build us a small
-local test: 10 practice questions with known answers from the data folder,
-a script that asks our machine each one, and a rough score like the judge
-would give. Run it, show the failures, and suggest the single highest-value
-fix to app/handler.py. We will repeat this loop all day.
+Explain in plain words: what does our machine currently do when a question
+arrives, what data does it have available to it, and how does the judge
+score answers? Do not change any code yet.
 ```
 
-This is the winning move. You only get 6 real scored attempts, and the
-judge never tells you the right answer. Teams that build their own practice
-test iterate fast for free; teams that do not, guess.
+Where you go from here is the hackathon. You get 6 scored attempts, the
+judge never tells you the right answer, and how you spend the time between
+attempts is the whole game. That part is yours to figure out.
 
 ## 4. When your local score looks good: face the judge
 

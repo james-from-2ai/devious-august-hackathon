@@ -1,9 +1,15 @@
-# Agricultural Advisory Hackathon
+# Hack to Save the Farm!
 
-**You are building an API that gives farming advice. A grader you cannot see
-will score it. You get a limited number of scored attempts.**
+**You are building a machine that gives farming advice. A judge you never
+meet will visit it, ask it questions, and score the answers. You only get a
+few scored visits, so most of your testing has to be your own.**
 
 That is the whole thing. The rest of this file explains it properly.
+
+**New to this, or just want the fastest path?** Read
+[QUICKSTART.md](QUICKSTART.md): four messages you paste into Claude Code,
+which does all the typing for you. You never need a git or terminal command
+of your own.
 
 ---
 
@@ -24,9 +30,12 @@ wrong is not a rounding error.
 
 ## 2. What you are actually building
 
-One HTTP endpoint.
+One **endpoint**. An endpoint is an address on the internet where a program
+answers questions: the judge sends your machine a question at that address,
+and your machine sends back an answer. `make tunnel` creates the address for
+you; your job is only what happens between question and answer.
 
-**Request** to `POST /advise`:
+**Request** the judge sends to `POST /advise`:
 
 ```json
 {

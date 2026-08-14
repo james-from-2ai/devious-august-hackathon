@@ -176,6 +176,8 @@ def cmd_submit():
                    json=payload(), timeout=600)
     if r.status_code == 429:
         die(f"Out of attempts: {r.json().get('detail', '')}")
+    if r.status_code == 403:
+        die(r.json().get("detail", "The challenge is over!"))
     if r.status_code == 400:
         # The judge refused before running anything; its message says why
         # and what to fix, so show it instead of a traceback.

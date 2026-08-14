@@ -119,8 +119,14 @@ def render_run(body):
         color = GREEN if verdict == "PASS" else RED
         detail = q["reason"] if q["category"] == "PASS" else \
             f"{q['category']}: {q['reason']}"
+        bonus = f"  {YELLOW}+{q['audio_bonus']:g} audio{RESET}" \
+            if q.get("audio_bonus") else ""
         print(f"{q['question_id']}  {color}{verdict}{RESET}  "
-              f"{q['score']:g}/10   {detail}")
+              f"{q['score']:g}/10{bonus}   {detail}")
+    if body.get("audio_bonus_total"):
+        print(f"\n{YELLOW}Audio bonus total: "
+              f"+{body['audio_bonus_total']:g}{RESET} "
+              f"(separate from the score above)")
 
     fails = body.get("category_counts", {})
     if fails:

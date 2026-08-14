@@ -138,6 +138,11 @@ def cmd_submit():
     require_env()
     if not ENDPOINT:
         die("ENDPOINT_URL is empty. Run `make tunnel` first.")
+    if not PARTICIPANTS:
+        die("PARTICIPANTS is empty in .env, and the leaderboard shows names, "
+            "not team ids.\nAdd both of you, for example:\n"
+            "    PARTICIPANTS=Ada Lovelace, Grace Hopper\n"
+            "then run `make submit` again. Nothing was spent.")
 
     ok, info = local_health()
     if not ok:
@@ -164,6 +169,10 @@ def cmd_submit():
                    json=payload(), timeout=600)
     if r.status_code == 429:
         die(f"Out of attempts: {r.json().get('detail', '')}")
+    if r.status_code == 400:
+        # The judge refused before running anything; its message says why
+        # and what to fix, so show it instead of a traceback.
+        die(f"The judge declined to run: {r.json().get('detail', r.text)}")
     r.raise_for_status()
     return render_run(r.json())
 

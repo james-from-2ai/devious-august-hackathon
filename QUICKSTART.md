@@ -24,15 +24,16 @@ are ready for the day.
 
 ## 2. At the start of the hack: switch your machine on
 
-The Slack channel gives you two values at 10:30, `SCORER_URL` and
-`TEAM_TOKEN`. Then paste:
+The Slack channel gives you the judge's address (`SCORER_URL`) at 10:30.
+Your team name is your identity with the judge, so pick it once and keep
+it. Then paste:
 
 ```
-Add these two lines to .env (I am pasting the values from Slack):
-SCORER_URL=... and TEAM_TOKEN=...
-Then start my advice machine (make dev) and keep it running, start the
-tunnel (make tunnel) and keep that running too, and confirm both worked:
-/health answers, and the tunnel registered us with the judge.
+Set SCORER_URL in .env to the judge address from Slack (I will paste it),
+and set TEAM_NAME to our team name. Then start my advice machine (make dev)
+and keep it running, start the tunnel (make tunnel) and keep that running
+too, and confirm both worked: /health answers, and the tunnel registered
+us with the judge.
 ```
 
 The tunnel gives your machine a public address (that address is your

@@ -20,8 +20,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 SCORER = os.environ.get("SCORER_URL", "").rstrip("/")
-TOKEN = os.environ.get("TEAM_TOKEN", "")
 TEAM = os.environ.get("TEAM_NAME", "")
+# Your team name IS your credential. TEAM_TOKEN only exists as an override
+# for events run in strict mode, and can stay empty.
+TOKEN = os.environ.get("TEAM_TOKEN", "") or TEAM
 ENDPOINT = os.environ.get("ENDPOINT_URL", "").rstrip("/")
 LOCAL = "http://localhost:8000"
 
@@ -42,8 +44,7 @@ def die(msg):
 
 def require_env():
     missing = [k for k, v in
-               [("SCORER_URL", SCORER), ("TEAM_TOKEN", TOKEN),
-                ("TEAM_NAME", TEAM)] if not v]
+               [("SCORER_URL", SCORER), ("TEAM_NAME", TEAM)] if not v]
     if missing:
         die(f"Missing in .env: {', '.join(missing)}")
 

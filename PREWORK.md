@@ -66,12 +66,19 @@ You want `{"status":"ok","block":1,"team":"..."}`.
 make tunnel
 ```
 
-cloudflared prints a public `https://something.trycloudflare.com` URL. Open
-it in a browser and add `/health` to confirm it reaches your machine.
+This starts cloudflared, waits for your public
+`https://something.trycloudflare.com` address, **saves it into `.env` for
+you, and registers it with the judge automatically**. On the day, that is
+the whole flow; today (with no judge running yet) it will say registration
+failed, which is expected and fine. The tunnel part working is what you are
+checking.
 
-**This URL changes every single time cloudflared restarts.** When it does,
-re-run `make register`. More attempts are lost to a stale URL than to any
-bug.
+To confirm it reaches your machine, open the printed URL in a browser and
+add `/health`.
+
+**The address changes every time cloudflared restarts**, so keep the tunnel
+window open, and if it ever closes just run `make tunnel` again; it re-does
+everything.
 
 ### 5. Run the verifier
 

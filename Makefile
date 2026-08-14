@@ -16,8 +16,10 @@ dev:
 check:
 	uv run python scripts/scorer_cli.py check
 
+# Starts cloudflared, saves the URL to .env, and registers with the judge,
+# all in one. The URL changes on every restart, so this must stay running.
 tunnel:
-	cloudflared tunnel --url http://localhost:8000
+	uv run python scripts/tunnel.py
 
 register:
 	uv run python scripts/scorer_cli.py register

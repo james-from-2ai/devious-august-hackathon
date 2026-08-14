@@ -123,10 +123,11 @@ def render_run(body):
             if q.get("audio_bonus") else ""
         print(f"{q['question_id']}  {color}{verdict}{RESET}  "
               f"{q['score']:g}/10{bonus}   {detail}")
-    if body.get("audio_bonus_total"):
-        print(f"\n{YELLOW}Audio bonus total: "
-              f"+{body['audio_bonus_total']:g}{RESET} "
-              f"(separate from the score above)")
+    if body.get("audio_max"):
+        print(f"\n{YELLOW}Chatbot {body['total_score']:g}/100 · "
+              f"Audio {body.get('audio_score', 0):g}/{body['audio_max']} · "
+              f"TOTAL {body.get('combined_score', body['total_score']):g}"
+              f"/{body.get('combined_max', 130)}{RESET}")
 
     fails = body.get("category_counts", {})
     if fails:

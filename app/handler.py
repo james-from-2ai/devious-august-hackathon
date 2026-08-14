@@ -95,6 +95,13 @@ async def advise(request: AdviseRequest) -> AdviseResponse:
     answer = "".join(block.text for block in message.content
                      if block.type == "text").strip()
 
+    # An empty string is schema-valid, passes `make check`, and then scores
+    # zero with nothing explaining why. If the model returned no text, say
+    # so visibly instead of silently.
+    if not answer:
+        answer = ("(no text was generated for this question; the model "
+                  "returned an empty response)")
+
     # Confidence is hardcoded, so it carries no information. A real signal
     # here is worth having, both for the judge and for your own eval loop.
     return AdviseResponse(answer=answer, confidence=0.8, sources=[])

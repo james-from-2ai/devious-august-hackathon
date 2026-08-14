@@ -25,7 +25,11 @@ TEAM = os.environ.get("TEAM_NAME", "")
 # for events run in strict mode, and can stay empty.
 TOKEN = os.environ.get("TEAM_TOKEN", "") or TEAM
 ENDPOINT = os.environ.get("ENDPOINT_URL", "").rstrip("/")
-LOCAL = "http://localhost:8000"
+# Where your machine listens locally. Hardcoding 8000 here sent "local
+# service is not answering" to anyone running on another port while their
+# tunnel was perfectly healthy. Set PORT (or LOCAL_URL) in .env if you moved.
+LOCAL = (os.environ.get("LOCAL_URL", "").rstrip("/")
+         or f"http://localhost:{os.environ.get('PORT', '8000')}")
 
 # Names go on the leaderboard. Sent on register and again on every run, so a
 # pair who fills this in late still gets credited rather than showing up as a
@@ -93,8 +97,11 @@ def cmd_register():
     r.raise_for_status()
     body = r.json()
     print(f"{GREEN}Registered{RESET} {TEAM} -> {ENDPOINT}")
-    print(f"Attempts: block 1 {body.get('block1_budget', '?')}, "
-          f"block 2 {body.get('block2_budget', '?')}")
+    # Remaining, not budget: this line prints on every tunnel restart, and
+    # "6" after you have spent three reads as three free attempts.
+    b1 = body.get("block1_remaining", body.get("block1_budget", "?"))
+    b2 = body.get("block2_remaining", body.get("block2_budget", "?"))
+    print(f"Attempts remaining: block 1 {b1}, block 2 {b2}")
     return 0
 
 

@@ -25,6 +25,12 @@ TEAM = os.environ.get("TEAM_NAME", "")
 ENDPOINT = os.environ.get("ENDPOINT_URL", "").rstrip("/")
 LOCAL = "http://localhost:8000"
 
+# Names go on the leaderboard. Sent on register and again on every run, so a
+# pair who fills this in late still gets credited rather than showing up as a
+# bare team id for the rest of the day.
+PARTICIPANTS = [p.strip() for p in
+                os.environ.get("PARTICIPANTS", "").split(",") if p.strip()]
+
 RED, GREEN, YELLOW, DIM, RESET = (
     "\033[31m", "\033[32m", "\033[33m", "\033[2m", "\033[0m")
 
@@ -46,6 +52,11 @@ def auth():
     return {"Authorization": f"Bearer {TOKEN}"}
 
 
+def payload():
+    """The body every scorer call sends. One place, so names never get lost."""
+    return {"team": TEAM, "endpoint_url": ENDPOINT, "participants": PARTICIPANTS}
+
+
 def local_health():
     try:
         r = httpx.get(f"{LOCAL}/health", timeout=5)
@@ -60,7 +71,7 @@ def cmd_check():
     if not ENDPOINT:
         die("ENDPOINT_URL is empty. Run `make tunnel`, then put the URL in .env.")
     r = httpx.post(f"{SCORER}/check", headers=auth(),
-                   json={"team": TEAM, "endpoint_url": ENDPOINT}, timeout=60)
+                   json=payload(), timeout=60)
     body = r.json()
     if body.get("pass"):
         print(f"{GREEN}CHECK PASS{RESET}  schema conforms, "
@@ -77,7 +88,7 @@ def cmd_register():
     if not ENDPOINT:
         die("ENDPOINT_URL is empty. Run `make tunnel` first.")
     r = httpx.post(f"{SCORER}/register", headers=auth(),
-                   json={"team": TEAM, "endpoint_url": ENDPOINT}, timeout=30)
+                   json=payload(), timeout=30)
     r.raise_for_status()
     body = r.json()
     print(f"{GREEN}Registered{RESET} {TEAM} -> {ENDPOINT}")
@@ -142,7 +153,7 @@ def cmd_submit():
         return 0
 
     r = httpx.post(f"{SCORER}/run", headers=auth(),
-                   json={"team": TEAM, "endpoint_url": ENDPOINT}, timeout=600)
+                   json=payload(), timeout=600)
     if r.status_code == 429:
         die(f"Out of attempts: {r.json().get('detail', '')}")
     r.raise_for_status()

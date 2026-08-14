@@ -40,18 +40,21 @@ The tunnel gives your machine a public address (that address is your
 **endpoint**, the door the judge knocks on) and registers it for you
 automatically.
 
-## 3. The middle of the day: get your bearings
+## 3. The middle of the day: see how it works
 
 ```
-Read data/SOURCE.md, examples/calibration.jsonl, and app/handler.py.
-Explain in plain words: what does our machine currently do when a question
-arrives, what data does it have available to it, and how does the judge
-score answers? Do not change any code yet.
+Read app/main.py, app/models.py, app/handler.py, and data/SOURCE.md.
+Draw us a flow diagram of exactly what happens from the moment a question
+arrives at our machine to the moment the answer leaves: every file,
+function, and outside call involved, plus what data exists in data/ that
+the current flow does or does not touch. Keep it beginner-friendly.
+Do not change any code.
 ```
 
-Where you go from here is the hackathon. You get 6 scored attempts, the
-judge never tells you the right answer, and how you spend the time between
-attempts is the whole game. That part is yours to figure out.
+Study the diagram together. Where you take the design from there is the
+hackathon: you get 6 scored attempts, the judge never tells you the right
+answer, and how you spend the time between attempts is the whole game. That
+part is yours to figure out.
 
 ## 4. When your local score looks good: face the judge
 

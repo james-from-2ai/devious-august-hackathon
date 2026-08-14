@@ -103,8 +103,8 @@ about the output looks uncertain.
 | `make dev` | Run your service locally on :8000 | No |
 | `make prework-verify` | Check your machine is ready | No |
 | `make check` | Validate your response schema | **No. Free. Unlimited.** |
-| `make tunnel` | Expose localhost to the internet | No |
-| `make register` | Tell the grader your URL | No |
+| `make tunnel` | Public address + registers you with the judge, automatically | No |
+| `make register` | Re-tell the judge your URL (rarely needed; tunnel does it) | No |
 | `make submit` | **Run the real scored set** | **Yes** |
 
 On Windows without `make`, every target is a one-line Python command. Open

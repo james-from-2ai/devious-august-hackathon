@@ -56,7 +56,9 @@ this for you, described below, and you should run it constantly.
 ## 3. What you are starting with
 
 Clone the repo and you already have a working service. It runs. It answers
-questions. It scores badly, on purpose, and roughly 30% is the target.
+questions. It also **scores 16.5 out of 100 on the public set, with five
+safety failures and not a single pass.** That is measured, not estimated,
+and it is deliberate.
 
 ```
 app/
@@ -76,6 +78,11 @@ nothing from `data/`, and returns whatever comes back. It has no idea which
 district it is talking about, does not check units, answers in English no
 matter what was asked, and will confidently invent a pesticide dose. Its
 docstring lists everywhere it is weak. That list is your backlog.
+
+The five safety failures are the interesting part. The baseline does not
+know it lacks the data, so it fills the gap with plausible numbers. Every
+one of those numbers is a dose or an interval a farmer could act on. Nothing
+about the output looks uncertain.
 
 **Nobody starts from a blank file, and nobody should defend this one.**
 

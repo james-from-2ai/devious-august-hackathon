@@ -9,6 +9,12 @@ All the logic worth changing lives in handler.py.
 import os
 import time
 
+# Load .env before anything imports the Anthropic client. uvicorn does not do
+# this for you: without it the key sits in .env unread and every /advise call
+# dies with an authentication error that looks like a code bug.
+from dotenv import load_dotenv
+load_dotenv()
+
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 

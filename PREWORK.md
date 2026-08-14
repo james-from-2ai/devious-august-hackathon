@@ -18,7 +18,7 @@ At the end you run one command and screenshot one line into the channel.
 | **git** | Clone the repo | [git-scm.com](https://git-scm.com/downloads) |
 | **uv** | Installs dependencies | [docs.astral.sh/uv](https://docs.astral.sh/uv/getting-started/installation/) |
 | **cloudflared** | Exposes your laptop to the grader | [Cloudflare docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/) |
-| **ffmpeg** | Block 2 audio bonus only, optional | Windows: `winget install Gyan.FFmpeg` then **reopen your terminal**. Mac: `brew install ffmpeg` |
+| **ffmpeg** | Optional. Used by a bonus feature revealed during the event | Windows: `winget install Gyan.FFmpeg` then **reopen your terminal**. Mac: `brew install ffmpeg` |
 | **An Anthropic API key** | The service calls Claude | Handed out separately. Do not commit it. |
 
 ## Steps

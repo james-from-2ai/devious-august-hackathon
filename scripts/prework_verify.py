@@ -25,9 +25,8 @@ PORT = 8000
 GREEN, RED, YELLOW, DIM, RESET = (
     "\033[32m", "\033[31m", "\033[33m", "\033[2m", "\033[0m")
 
-# Checks that are not required to compete. Block 2 is audio, and the text
-# answer stays mandatory there, so a missing ffmpeg costs bonus points at
-# worst. It should still be flagged rather than hidden.
+# Checks that are not required to compete. A missing ffmpeg costs bonus
+# points at worst, so it warns rather than fails.
 OPTIONAL = {"ffmpeg"}
 
 results = []
@@ -210,8 +209,8 @@ def main():
         "https://developers.cloudflare.com/cloudflare-one/connections/"
         "connect-networks/downloads/"))
     check_tool("ffmpeg", optional=True, hint=(
-        "only needed for the block 2 audio bonus. Windows: "
-        "winget install Gyan.FFmpeg, then reopen your terminal."))
+        "optional; used by a bonus feature revealed during the event. "
+        "Windows: winget install Gyan.FFmpeg, then reopen your terminal."))
 
     if check_env_file():
         check_api_key()

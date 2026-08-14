@@ -202,14 +202,14 @@ happens generally do worse than teams who spend it in the last ten.
 
 ## 8. Block 2
 
-Halfway through, the input changes to a voice note: audio plus a
-machine transcript that is noticeably wrong, in Hindi or Telugu. Your
-attempt budget resets.
+Halfway through, the questions change in a way that is announced at 12:30,
+during the break. Three things you can plan around now: your attempt budget
+resets to 6, everything you build in Block 1 carries forward, and the
+per-question timeout rises to 30 seconds. There is also an optional bonus
+worth up to +2 per question, revealed at the same time.
 
-The **text answer stays mandatory and is still what gets scored**. Returning
-audio is a bonus, not a requirement, so nobody scores zero because ffmpeg
-would not install. All your Block 1 work carries forward. The per-question
-timeout rises to 30 seconds.
+Knowing the twist early would change how you spend Block 1, which is why it
+stays sealed. Resist the urge to dig for it; it is more fun in the room.
 
 ## 9. The leaderboard
 

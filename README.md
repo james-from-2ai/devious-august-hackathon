@@ -1,3 +1,8 @@
+> **This event ran on 14 August 2026 and is now closed.** The judge is
+> offline and the repo is archived. Final standings: **lames 118.2/130**,
+> weather-wanderers 106.1 (a perfect 30/30 audio score), unnati-katie 74.3,
+> against a starter-code baseline of 23.3. Thanks for playing. 🌾
+
 # Hack to Save the Farm!
 
 **You are building a machine that gives farming advice. A judge you never
@@ -200,16 +205,24 @@ out.
 Teams who spend their first attempt in the first ten minutes to see what
 happens generally do worse than teams who spend it in the last ten.
 
-## 8. Block 2
+## 8. Block 2 (the twist, unsealed post-event)
 
-Halfway through, the questions change in a way that is announced at 12:30,
-during the break. Three things you can plan around now: your attempt budget
-resets to 6, everything you build in Block 1 carries forward, and the
-per-question timeout rises to 30 seconds. There is also an optional bonus
-worth up to +2 per question, revealed at the same time.
+Halfway through, some questions arrived as **voice notes**: the request
+carried a `question_audio` field (base64 ogg/opus), and the `question` text
+was a deliberately degraded machine transcript of that audio — wrong about
+crops, doses, and district names. The audio was the source of truth; a
+machine that trusted the text got lied to.
 
-Knowing the twist early would change how you spend Block 1, which is why it
-stays sealed. Resist the urge to dig for it; it is more fun in the room.
+Teams could also earn a separate **audio track worth 30 points** (on top of
+the /100 chatbot score, total /130) by returning `answer_audio`: base64
+audio of their answer being spoken, in the farmer's language, verified by
+round-trip transcription against their own text answer. One gotcha caught
+teams live: a FastAPI `response_model` silently strips unknown fields, so
+returning audio required extending the response model.
+
+Attempt budgets reset to 10 at the switch and the per-question timeout rose
+to 30 seconds. Both podium teams cracked the audio track; one scored a
+perfect 30/30.
 
 ## 9. The leaderboard
 
